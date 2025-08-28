@@ -19,6 +19,17 @@ Getting Started & Run
     Once you run the loader, you can run the `driver.java` class.
 
 - B. Database (MySQL) 
+  - Build Gradle.kts must include MySQLConnector.
+  - Create a database (local or from a 3rd party)
+     - I have 5 tables (`students`, `departments`, `instructors`, `courses` and `enrollments`).
+  - If done correctly, you should be able to run it and insert data and get database on the console.
 
+Troubleshooting
+Some of the problems I encountered:
+ - Package javafx.* does not exist.
+   - IDE tends to switch JDK's so make sure to reapply Java 8 with JavaFX.
+ - FileNotFoundException:
+   - Loader was not ran or Loader failed to create and fill `.dat` files.
+  
 License 
 - Apache-2.0 license
