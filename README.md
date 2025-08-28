@@ -6,12 +6,19 @@ There are two implementations:
 - Database - uses MySQL with a small configuration layer. (revamp).
 
 
-
-
 Requirements 
 - JDK 8 with JavaFX(I am using Azul Zulu 8 FX) or you can use JDK+11 with OpenJFX dependencies.
 - Gradle Wrapper (included)
 - MySQL 8.
+
+Getting Started & Run
+- A. Generic Nodes
+  - Create data files.
+    You MUST run the `Loader` class once (it writes `student.dat`, `department.dat`, `instructor.dat`, `course.dat` and `enrollment.dat` to the working directory).
+      - If you see a FileNotFoundException: `student.dat` or any other `.dat` file, your working directory is wrong or the files are empty. Run `Loader` again.
+    Once you run the loader, you can run the `driver.java` class.
+
+- B. Database (MySQL) 
 
 License 
 - Apache-2.0 license
